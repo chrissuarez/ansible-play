@@ -2,12 +2,12 @@
   copy:
     src: files/docker-compose.yml
     dest: /home/downloaders/docker-compose/docker-compose.yml
-    owner: downloaders
-    group: downloaders
+    owner: downloader
+    group: downloader
 
 - name: Start containers
   docker_compose:
-    project_src: /home/downloaders/docker-compose/docker-compose.yml
+    project_src: /home/downloader/docker-compose/docker-compose.yml
     state: present
     compose_files:
-      - /home/downloaders/docker-compose/docker-compose.yml
+      - /home/downloader/docker-compose/docker-compose.yml
