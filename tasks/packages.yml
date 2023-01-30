@@ -12,6 +12,7 @@
         - curl
         - gnupg2
         - software-properties-common
+        - nfs-kernel-server
     state: present
     update_cache: no
 
