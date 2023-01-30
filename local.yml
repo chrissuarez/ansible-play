@@ -2,11 +2,11 @@
   connection: local
   become: true
 
-pre_tasks:
-  - name: update repositories
-    apt:
-      update_cache: yes
-    change_when: false
+  pre_tasks:
+    - name: update repositories
+      apt:
+        update_cache: yes
+      change_when: false
 
-tasks:
-  include: tasks/packages.yml
+  tasks:
+    include: tasks/packages.yml
