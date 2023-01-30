@@ -9,7 +9,7 @@
       changed_when: False
 
   vars:
-    include: variables/docker.yml
+    - include: variables/docker.yml
 
   tasks:
-    include: tasks/packages.yml
+    - include: tasks/packages.yml
