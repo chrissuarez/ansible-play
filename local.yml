@@ -8,8 +8,6 @@
         update_cache: yes
       changed_when: False
 
-  vars:
-    - include: variables/docker.yml
-
   tasks:
+    - include: variables/docker.yml
     - include: tasks/packages.yml
