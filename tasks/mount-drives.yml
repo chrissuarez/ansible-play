@@ -1,6 +1,4 @@
 - name: mount Synology NAS donload drive
-  hosts: all
-  become: true
   vars:
     mynfs: "192.168.68.16:/volumn1/downloads"
     mountpoint: "/mnt/downloads"
