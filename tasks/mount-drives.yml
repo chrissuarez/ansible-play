@@ -26,6 +26,6 @@
   ansible.posix.mount:
     src: "{{ mynfs }}"
     path: "{{ mountpoint }}"
-    fstype: ext4
+    fstype: nfs
     opts: "{{ myopts }}"
     state: mounted
