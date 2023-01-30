@@ -10,3 +10,18 @@
     owner: root
     group: root
     mode: 0440
+
+- name: crate downloader user
+  user:
+    name: downloader
+    uid: 2003
+    createhome: yes
+    home: /home/downloader
+
+- name: copy sudoers_downloader
+  copy:
+    src: files/sudoers_downloader
+    dest: /etc/sudoers.d/downloader
+    owner: root
+    group: root
+    mode: 0440
