@@ -1,3 +1,9 @@
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/downloaders/docker-compose/
+    state: directory
+    mode: '0755'
+
 - name: copy docker-compose file
   copy:
     src: files/docker-compose.yml
