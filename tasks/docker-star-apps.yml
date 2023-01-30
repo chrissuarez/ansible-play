@@ -1,0 +1,13 @@
+- name: copy docker-compose file
+  copy:
+    src: files/docker-compose.yml
+    dest: /home/downloaders/docker-compose/docker-compose.yml
+    owner: downloaders
+    group: downloaders
+
+- name: Start containers
+  docker_compose:
+    project_src: /home/downloaders/docker-compose/docker-compose.yml
+    state: present
+    compose_files:
+      - /home/downloaders/docker-compose/docker-compose.yml
