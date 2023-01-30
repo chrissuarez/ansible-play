@@ -2,8 +2,8 @@
   copy:
     src: files/docker-compose.yml
     dest: /home/downloaders/docker-compose/docker-compose.yml
-    owner: downloader
-    group: downloader
+    owner: root
+    group: root
 
 - name: Start containers
   docker_compose:
