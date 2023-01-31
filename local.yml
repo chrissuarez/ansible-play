@@ -9,7 +9,7 @@
       changed_when: False
 
   tasks:
-    - include_vars: variables/docker.yml
+    - include_vars: variables/docker_variables.yml
     - include_vars: variables/drive_variables.yml
     - include: tasks/packages.yml
     - include: tasks/users.yml
