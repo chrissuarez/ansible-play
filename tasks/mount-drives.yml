@@ -39,7 +39,7 @@
 #    group: root
 
 - name: mount network share
-  ansible.posix.mount:
+  mount:
     src: "{{ mynfs }}"
     path: "{{ mountpoint }}"
     fstype: nfs
