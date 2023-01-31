@@ -4,7 +4,8 @@
     state: directory
     owner: downloader
     group: downloader
-    mode: '0777'
+    recurse: yes
+    mode: '0775'
 
 - name: utility present redhat-like
   ansible.builtin.yum:
