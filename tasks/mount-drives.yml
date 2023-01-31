@@ -2,8 +2,8 @@
   ansible.builtin.file:
     path: "{{ mountpoint }}"      
     state: directory
-    owner: downloader
-    group: downloader
+    owner: root
+    group: root
     mode: '0777'
 
 - name: utility present redhat-like
