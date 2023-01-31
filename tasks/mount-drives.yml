@@ -2,9 +2,9 @@
   file:
     path: "{{ mountpoint }}"      
     state: directory
-    mode: '0777'
     owner: downloader
     group: downloader
+    mode: "0775"
   become: yes
   become_user: root
 
