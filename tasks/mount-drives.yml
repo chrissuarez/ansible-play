@@ -1,5 +1,5 @@
 - name: Ansible file module create directory    
-  file:
+  ansible.builtin.file:
     path: "{{ mountpoint }}"      
     state: directory
     owner: downloader
