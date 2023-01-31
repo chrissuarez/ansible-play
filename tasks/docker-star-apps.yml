@@ -2,8 +2,7 @@
   file:
     path: /home/downloader/docker-compose      
     state: directory
-    owner: downloader
-    group: downloader
+    recurse: yes
   become: yes
   become_user: downloader
 
