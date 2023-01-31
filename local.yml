@@ -16,4 +16,3 @@
     - include: tasks/mount-drives.yml
     - include: tasks/docker-star-apps.yml
     - include: tasks/cron.yml
-#    - include: tasks/working_dir.yml
