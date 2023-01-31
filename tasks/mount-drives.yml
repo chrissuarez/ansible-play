@@ -9,6 +9,7 @@
   file:
     path: "{{ mountpoint }}"
     owner: "downloader"
+    recurse: yes
   become: yes
   become_user: root
 
