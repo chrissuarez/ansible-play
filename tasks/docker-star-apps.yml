@@ -13,8 +13,7 @@
     owner: downloader
     group: downloader
 
-- name: Start containers
-  community.docker.docker_compose:
-    project_src: /home/downloader/docker-compose
-    files:
-      - docker-compose.yml
+- name: Run docker-compose up
+  shell: docker-compose up
+  args:
+    chdir: /home/downloader/docker-compose
