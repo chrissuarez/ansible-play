@@ -1,3 +1,11 @@
+- name: Ansible file module create directory    
+  file:
+    path: "{{ mountpoint }}"      
+    state: directory
+    owner: downloader
+    group: downloader
+    mode: '0777'
+
 - name: utility present redhat-like
   ansible.builtin.yum:
     name:
