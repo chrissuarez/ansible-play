@@ -4,14 +4,14 @@
     state: directory
   become: yes
   become_user: root
-
-- name: Change owner of the directory to 'downloader'
-  file:
-    path: /mnt/downloads
-    owner: downloader
-    recurse: yes
-  become: yes
-  become_user: root
+#
+#- name: Change owner of the directory to 'downloader'
+#  file:
+#    path: /mnt/downloads
+#    owner: downloader
+#    recurse: yes
+#  become: yes
+#  become_user: root
 
 - name: utility present redhat-like
   ansible.builtin.yum:
@@ -44,3 +44,6 @@
     fstype: nfs
     opts: "{{ myopts }}"
     state: mounted
+    owner: downloader
+    user: downloader
+  become: yes
