@@ -1,8 +1,11 @@
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /home/downloader/docker-compose
+- name: Create folder for docker compose   
+  file:
+    path: /home/downloader/docker-compose      
     state: directory
-    mode: '0755'
+    owner: downloader
+    group: downloader
+  become: yes
+  become_user: downloader
 
 - name: copy docker-compose file
   copy:

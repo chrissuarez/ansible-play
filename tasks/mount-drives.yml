@@ -2,7 +2,6 @@
   file:
     path: "{{ mountpoint }}"      
     state: directory
-    mode: '0775'
     owner: downloader
     group: downloader
   become: yes
