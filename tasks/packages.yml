@@ -31,7 +31,7 @@
 
 - name: Add adminstrator to docker group
   user:
-    name: auto
+    name: "{{ admin_user }}"
     groups: docker
     append: yes
 
