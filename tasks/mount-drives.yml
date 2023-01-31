@@ -2,8 +2,9 @@
   file:
     path: "{{ mountpoint }}"      
     state: directory
+    recurse: yes
   become: yes
-  become_user: root
+  become_user: downloader
 #
 #- name: Change owner of the directory to 'downloader'
 #  file:
