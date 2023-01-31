@@ -11,7 +11,7 @@
     src: files/docker-compose.yml
     dest: /home/downloader/docker-compose/docker-compose.yml
     owner: downloader
-    group: dpwnloader
+    group: downloader
 
 - name: Start containers
   docker_compose:
