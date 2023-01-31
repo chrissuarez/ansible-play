@@ -7,7 +7,7 @@
 
 - name: Change owner of the directory to 'downloader'
   file:
-    path: "{{ mountpoint }}"
+    path: /mnt/downloads
     owner: "downloader"
     recurse: yes
   become: yes
