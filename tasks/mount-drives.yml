@@ -45,6 +45,4 @@
     fstype: nfs
     opts: "{{ myopts }}"
     state: mounted
-    owner: downloader
-    user: downloader
   become: yes
