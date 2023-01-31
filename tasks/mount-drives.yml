@@ -6,9 +6,7 @@
   become_user: root
 
 - name: Change owner of the directory to 'downloader'
-  file:
-    path: "{{ mountpoint }}"
-    owner: "downloader"
+  shell: chown downloader {{ mountpoint }}
   become: yes
 
 - name: utility present redhat-like
