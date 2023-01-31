@@ -2,10 +2,9 @@
   ansible.builtin.file:
     path: "{{ mountpoint }}"      
     state: directory
+    recurse: yes
     owner: downloader
     group: downloader
-    recurse: yes
-    mode: '0775'
 
 - name: utility present redhat-like
   ansible.builtin.yum:
