@@ -1,5 +1,5 @@
 - name: Ansible file module create directory    
-  ansible.builtin.file:
+  file:
     path: "{{ mountpoint }}"      
     state: directory
     mode: '0775'
