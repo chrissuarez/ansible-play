@@ -15,8 +15,6 @@
   user:
     name: downloader
     uid: 2003
-    createhome: yes
-    home: /home/downloader
 
 - name: copy sudoers_downloader
   copy:
