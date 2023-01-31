@@ -15,7 +15,6 @@
 
 - name: Start containers
   docker_compose:
-    project_src: /home/downloader/docker-compose/docker-compose.yml
+    definition: /home/downloader/docker-compose/docker-compose.yml
+    project_name: myproject
     state: present
-    compose_files:
-      - /home/downloader/docker-compose/docker-compose.yml
