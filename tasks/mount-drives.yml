@@ -2,11 +2,14 @@
   file:
     path: "{{ mountpoint }}"      
     state: directory
-    owner: downloader
-    group: downloader
-    mode: "0775"
   become: yes
   become_user: root
+
+- name: Change owner of the directory to 'downloader'
+  file:
+    path: "{{ mountpoint }}"
+    owner: "downloader"
+  become: yes
 
 - name: utility present redhat-like
   ansible.builtin.yum:
