@@ -14,7 +14,7 @@
     group: downloader
 
 - name: Start containers
-  docker_compose:
-    definition: /home/downloader/docker-compose/docker-compose.yml
-    project_name: myproject
-    state: present
+  community.docker.docker_compose:
+    project_src: /home/downloader/docker-compose
+    files:
+      - docker-compose.yml
