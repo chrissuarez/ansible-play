@@ -1,0 +1,7 @@
+- name: Display the current working directory
+  command: pwd
+  register: result
+
+- name: Print the result
+  debug:
+    var: result.stdout_lines
