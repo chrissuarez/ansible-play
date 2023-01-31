@@ -8,7 +8,7 @@
 - name: Change owner of the directory to 'downloader'
   file:
     path: /mnt/downloads
-    owner: "downloader"
+    owner: downloader
     recurse: yes
   become: yes
   become_user: root
