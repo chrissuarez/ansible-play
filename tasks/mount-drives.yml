@@ -10,6 +10,7 @@
     path: "{{ mountpoint }}"
     owner: "downloader"
   become: yes
+  become_user: root
 
 - name: utility present redhat-like
   ansible.builtin.yum:
