@@ -3,6 +3,10 @@
     path: "{{ mountpoint }}"      
     state: directory
     mode: '0775'
+    owner: downloader
+    group: downloader
+  become: yes
+  become_user: root
 
 - name: utility present redhat-like
   ansible.builtin.yum:
